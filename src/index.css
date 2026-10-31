@@ -1,0 +1,124 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-obsidian: #0B0F17;
+    --card-surface: rgba(21, 28, 40, 0.65);
+    --border-subtle: rgba(255, 255, 255, 0.08);
+    --text-alabaster: #F0F4F8;
+    --text-muted: #8A99AD;
+    --accent-amber: #F59E0B;
+    --accent-cyan: #38BDF8;
+    --status-green: #10B981;
+  }
+
+  body {
+    background-color: #0B0F17;
+    color: #F0F4F8;
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: 'Space Grotesk', system-ui, -apple-system, sans-serif;
+  }
+
+  code, pre, .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0B0F17;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(245, 158, 11, 0.5);
+}
+
+/* Abstract Grid and Noise */
+.bg-grid-pattern {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+}
+
+.noise-overlay {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.035'/%3E%3C/svg%3E");
+}
+
+/* Glassmorphic card styling */
+.glass-panel {
+  background: rgba(21, 28, 40, 0.65);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-panel-hover {
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.glass-panel-hover:hover {
+  border-color: rgba(245, 158, 11, 0.3);
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5), 0 0 25px -5px rgba(245, 158, 11, 0.07);
+}
+
+/* Glow effects */
+.amber-glow {
+  box-shadow: 0 0 30px -5px rgba(245, 158, 11, 0.25);
+}
+.cyan-glow {
+  box-shadow: 0 0 30px -5px rgba(56, 189, 248, 0.25);
+}
+
+/* Dedicated Print Stylesheet for Resume Export */
+@media print {
+  body {
+    background-color: #ffffff !important;
+    color: #111827 !important;
+    font-size: 11pt !important;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  .print-only {
+    display: block !important;
+  }
+
+  .glass-panel {
+    background: transparent !important;
+    border: 1px solid #e5e7eb !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+    color: #111827 !important;
+    break-inside: avoid;
+  }
+
+  h1, h2, h3, h4 {
+    color: #000000 !important;
+  }
+
+  p, span, li, div {
+    color: #374151 !important;
+  }
+
+  .print-heading {
+    border-bottom: 1.5px solid #111827 !important;
+    color: #111827 !important;
+  }
+
+  a {
+    text-decoration: none !important;
+    color: #111827 !important;
+  }
+}
