@@ -39,7 +39,7 @@ export const SawadSidebar: React.FC<SawadSidebarProps> = ({ onPrintResume }) => 
         <div className="relative w-full aspect-[4/5] rounded-[24px] overflow-hidden bg-gradient-to-br from-[#F59E0B] via-[#E25A1C] to-[#1E293B] p-1.5 shadow-md group">
           <div className="w-full h-full rounded-[20px] overflow-hidden bg-[#E2E8F0] relative">
             <img
-              src="/hrishikesh.png"
+              src="./hrishikesh.png"
               alt="Hrishikesh Tonge"
               className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
             />
