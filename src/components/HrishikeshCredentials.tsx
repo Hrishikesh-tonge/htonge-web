@@ -2,7 +2,7 @@ import React from 'react';
 import { Award, ShieldCheck, GraduationCap } from 'lucide-react';
 import { CREDENTIALS_DATA } from '../utils/portfolioData';
 
-export const SawadCredentials: React.FC = () => {
+export const HrishikeshCredentials: React.FC = () => {
   const certifications = CREDENTIALS_DATA.filter((c) => c.type === 'certification');
   const honors = CREDENTIALS_DATA.filter((c) => c.type === 'honor');
   const education = CREDENTIALS_DATA.filter((c) => c.type === 'education');

@@ -3,7 +3,7 @@ import { ArrowUpRight, CheckCircle2, Layers } from 'lucide-react';
 import { SYSTEMS_DATA, SystemArchitecture } from '../utils/portfolioData';
 import { SystemFilterCategory, filterSystems } from '../utils/systemFilter';
 
-export const SawadProjects: React.FC = () => {
+export const HrishikeshProjects: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState<SystemFilterCategory>('All');
 
   const categories: SystemFilterCategory[] = [

@@ -2,7 +2,7 @@ import React from 'react';
 import { ArrowUpRight, Award, Calendar, MapPin } from 'lucide-react';
 import { CAREER_DATA } from '../utils/portfolioData';
 
-export const SawadExperience: React.FC = () => {
+export const HrishikeshExperience: React.FC = () => {
   return (
     <section id="experience" className="space-y-8 scroll-mt-24 pt-6" aria-label="Professional Experience">
       {/* Sawad-Style Giant Section Header */}

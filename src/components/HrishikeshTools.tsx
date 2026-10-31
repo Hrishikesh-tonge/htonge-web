@@ -1,7 +1,7 @@
 import React from 'react';
 import { TECH_ITEMS } from './TechLogos';
 
-export const SawadTools: React.FC = () => {
+export const HrishikeshTools: React.FC = () => {
   return (
     <section id="tools" className="space-y-8 scroll-mt-24 pt-6" aria-label="Tools and Technologies">
       {/* Sawad-Style Giant Section Header */}

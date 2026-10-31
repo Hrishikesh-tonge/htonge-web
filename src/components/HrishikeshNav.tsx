@@ -1,11 +1,11 @@
 import React from 'react';
 import { Home, FolderGit2, Briefcase, Wrench, Mail, FileText, Printer } from 'lucide-react';
 
-interface SawadNavProps {
-  onPrintResume: () => void;
+interface HrishikeshNavProps {
+  onPrintResume?: () => void;
 }
 
-export const SawadNav: React.FC<SawadNavProps> = ({ onPrintResume }) => {
+export const HrishikeshNav: React.FC<HrishikeshNavProps> = ({ onPrintResume }) => {
   return (
     <header className="fixed top-4 left-0 right-0 z-50 flex items-center justify-center px-4 pointer-events-none no-print">
       <div className="pointer-events-auto flex items-center gap-1 sm:gap-2 px-3 py-2 rounded-full bg-[#1A1E26]/90 backdrop-blur-xl border border-white/10 shadow-2xl">
@@ -61,15 +61,16 @@ export const SawadNav: React.FC<SawadNavProps> = ({ onPrintResume }) => {
 
         <div className="w-[1px] h-4 bg-white/20 mx-1" />
 
-        <button
-          type="button"
-          onClick={onPrintResume}
+        <a
+          href="./Hrishikesh_Tonge_Resume.pdf"
+          download="Hrishikesh_Tonge_Resume.pdf"
           className="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-[#F59E0B] hover:bg-[#F59E0B]/90 text-slate-950 font-bold text-xs font-mono transition-all shadow-md cursor-pointer"
-          title="Print or export CV to PDF"
+          title="Download Official Resume (PDF)"
+          aria-label="Download Official Resume (PDF)"
         >
-          <Printer className="w-3.5 h-3.5" />
+          <FileText className="w-3.5 h-3.5" />
           <span className="hidden sm:inline">Resume PDF</span>
-        </button>
+        </a>
       </div>
     </header>
   );

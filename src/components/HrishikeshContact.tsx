@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Mail, Phone, MapPin, Send, Check, Copy } from 'lucide-react';
 import { copyToClipboard } from '../utils/clipboard';
 
-export const SawadContact: React.FC = () => {
+export const HrishikeshContact: React.FC = () => {
   const [formState, setFormState] = useState({ name: '', email: '', scope: 'Consulting Engagement', message: '' });
   const [status, setStatus] = useState<'idle' | 'sending' | 'success'>('idle');
   const [copiedEmail, setCopiedEmail] = useState(false);
@@ -61,15 +61,20 @@ export const SawadContact: React.FC = () => {
                 </div>
                 <div>
                   <div className="text-[10px] font-mono text-[#8A99AD] uppercase">Email Inquiries</div>
-                  <a href={`mailto:${email}`} className="text-xs font-mono font-medium text-white hover:text-[#F59E0B] transition-colors">
+                  <button
+                    type="button"
+                    onClick={handleCopyEmail}
+                    className="text-xs font-mono font-medium text-white hover:text-[#F59E0B] transition-colors cursor-pointer text-left"
+                    title="Click to copy email"
+                  >
                     {email}
-                  </a>
+                  </button>
                 </div>
               </div>
               <button
                 type="button"
                 onClick={handleCopyEmail}
-                className="p-1.5 rounded-lg bg-white/5 hover:bg-white/10 text-xs font-mono text-white transition-colors"
+                className="p-1.5 rounded-lg bg-white/5 hover:bg-white/10 text-xs font-mono text-white transition-colors cursor-pointer"
                 title="Copy email"
               >
                 {copiedEmail ? <Check className="w-3.5 h-3.5 text-[#10B981]" /> : <Copy className="w-3.5 h-3.5" />}
@@ -83,9 +88,14 @@ export const SawadContact: React.FC = () => {
                 </div>
                 <div>
                   <div className="text-[10px] font-mono text-[#8A99AD] uppercase">Phone / WhatsApp</div>
-                  <a href={`tel:${phone}`} className="text-xs font-mono font-medium text-white hover:text-[#38BDF8] transition-colors">
+                  <button
+                    type="button"
+                    onClick={handleCopyPhone}
+                    className="text-xs font-mono font-medium text-white hover:text-[#38BDF8] transition-colors cursor-pointer text-left"
+                    title="Click to copy phone number"
+                  >
                     {phone}
-                  </a>
+                  </button>
                 </div>
               </div>
               <button

@@ -2,7 +2,7 @@ import React, { useMemo } from 'react';
 import { ArrowUpRight, Zap, Database, ShieldCheck, Flame, GitBranch } from 'lucide-react';
 import { getYearsOfExperience } from '../utils/experience';
 
-export const SawadHero: React.FC = () => {
+export const HrishikeshHero: React.FC = () => {
   const yoe = useMemo(() => getYearsOfExperience(), []);
 
   return (
