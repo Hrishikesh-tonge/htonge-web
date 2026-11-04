@@ -19,7 +19,27 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-[#0E1217] text-[#F0F4F8] selection:bg-[#F59E0B]/30 selection:text-white antialiased">
+    <div className="min-h-screen bg-[#0B0F17] text-[#F0F4F8] selection:bg-[#F59E0B]/30 selection:text-white antialiased relative overflow-x-hidden">
+      {/* Atmospheric Ambient Lighting Gradients */}
+      <div 
+        aria-hidden="true" 
+        className="fixed top-[-100px] left-[10%] w-[650px] h-[550px] bg-gradient-to-br from-[#F59E0B]/12 via-[#E25A1C]/5 to-transparent rounded-full blur-[130px] pointer-events-none -z-10" 
+      />
+      <div 
+        aria-hidden="true" 
+        className="fixed top-[40%] right-[-100px] w-[550px] h-[650px] bg-gradient-to-bl from-[#38BDF8]/10 via-[#0284C7]/4 to-transparent rounded-full blur-[150px] pointer-events-none -z-10" 
+      />
+      <div 
+        aria-hidden="true" 
+        className="fixed bottom-0 left-[20%] w-[500px] h-[400px] bg-gradient-to-tr from-[#10B981]/6 to-transparent rounded-full blur-[130px] pointer-events-none -z-10" 
+      />
+
+      {/* Micro Tech-Dot Matrix with radial fade mask */}
+      <div 
+        aria-hidden="true" 
+        className="fixed inset-0 bg-tech-dots pointer-events-none -z-10 opacity-60" 
+      />
+
       {/* Floating Pill Navigation */}
       <HrishikeshNav onPrintResume={handlePrintResume} />
 
@@ -30,7 +50,7 @@ export default function App() {
           <HrishikeshSidebar onPrintResume={handlePrintResume} />
 
           {/* Right Main Scrollable Content */}
-          <main className="flex-1 w-full space-y-16 sm:space-y-20 min-w-0">
+          <main className="flex-1 w-full space-y-16 sm:space-y-24 min-w-0">
             <HrishikeshHero />
             <HrishikeshProjects />
             <HrishikeshExperience />
