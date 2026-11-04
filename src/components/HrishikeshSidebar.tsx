@@ -43,7 +43,7 @@ export const HrishikeshSidebar: React.FC = () => {
         </div>
 
         {/* Portrait Image Container */}
-        <div className="relative w-full aspect-[4/5] rounded-[24px] overflow-hidden bg-gradient-to-br from-[#F59E0B]/60 via-[#E25A1C]/40 to-[#38BDF8]/30 p-1 shadow-2xl group">
+        <div className="relative w-full max-w-[280px] sm:max-w-none mx-auto aspect-[4/5] rounded-[24px] overflow-hidden bg-gradient-to-br from-[#F59E0B]/60 via-[#E25A1C]/40 to-[#38BDF8]/30 p-1 shadow-2xl group">
           <div className="w-full h-full rounded-[20px] overflow-hidden bg-[#0B0F17] relative">
             <img
               src="./hrishikesh.png"
@@ -82,7 +82,7 @@ export const HrishikeshSidebar: React.FC = () => {
         {/* Micro Key Metrics Row */}
         <div className="grid grid-cols-3 gap-2 py-3 px-3 rounded-2xl bg-white/[0.03] border border-white/5 text-center font-mono">
           <div>
-            <div className="text-sm font-bold text-white">3.5+</div>
+            <div className="text-sm font-bold text-white">2+</div>
             <div className="text-[10px] text-[#8A99AD]">Yrs at EY</div>
           </div>
           <div className="border-x border-white/10">

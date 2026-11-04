@@ -54,7 +54,7 @@ export const HrishikeshExperience: React.FC = () => {
                 </div>
               </div>
 
-              <div className="flex items-center gap-2 text-xs font-mono text-[#8A99AD] bg-white/[0.03] px-3 py-1.5 rounded-xl border border-white/5 shrink-0">
+              <div className="flex flex-wrap items-center gap-2 text-xs font-mono text-[#8A99AD] bg-white/[0.03] px-3 py-1.5 rounded-xl border border-white/5 shrink-0">
                 <Calendar className="w-3.5 h-3.5 text-[#F59E0B]" />
                 <span>{job.period}</span>
                 <span className="text-white/20">•</span>
