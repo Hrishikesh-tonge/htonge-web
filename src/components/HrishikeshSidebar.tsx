@@ -2,11 +2,7 @@ import React, { useState } from 'react';
 import { Mail, Phone, Linkedin, Github, Code2, MapPin, Award, ShieldCheck, Download, Copy, Check, Sparkles } from 'lucide-react';
 import { copyToClipboard } from '../utils/clipboard';
 
-interface HrishikeshSidebarProps {
-  onPrintResume?: () => void;
-}
-
-export const HrishikeshSidebar: React.FC<HrishikeshSidebarProps> = ({ onPrintResume }) => {
+export const HrishikeshSidebar: React.FC = () => {
   const [copiedEmail, setCopiedEmail] = useState(false);
 
   const email = 'hrishikeshtonge@gmail.com';

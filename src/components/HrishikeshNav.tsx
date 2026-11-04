@@ -1,11 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Home, FolderGit2, Briefcase, Wrench, Mail, FileText, Award } from 'lucide-react';
 
-interface HrishikeshNavProps {
-  onPrintResume?: () => void;
-}
-
-export const HrishikeshNav: React.FC<HrishikeshNavProps> = ({ onPrintResume }) => {
+export const HrishikeshNav: React.FC = () => {
   const [activeSection, setActiveSection] = useState('home');
 
   useEffect(() => {
